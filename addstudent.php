@@ -104,6 +104,18 @@ if (isset($_SESSION['id'])) {
                     <input type="submit" value="Save" name="submit" class="btn btn-primary"/>
                 </form>
             </div>
+            <script>
+                function validateForm() {
+                    var fileInput = document.getElementById('fileToUpload');
+                    var filePath = fileInput.value;
+                    // Check if a file is selected
+                    if (filePath.trim() === "") {
+                        alert("Please select an image.");
+                        return false;
+                    }
+                    return true;
+                }
+            </script>
 EOD;
     }
 
